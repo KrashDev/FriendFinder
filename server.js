@@ -1,4 +1,5 @@
-
+// npm install nodemon
+// This makes it so we dont have to restarrt the server every time we make a change
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
@@ -17,6 +18,9 @@ require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 
+
+// to catch the sumbission we use app.post
+// express-validator can be used to validate emails in an express application, just install it like anything else npm install express-validator
 
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
